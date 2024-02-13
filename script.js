@@ -46,3 +46,8 @@ document.getElementById("close-button-contact").addEventListener("click", functi
     document.getElementById("popupContact").style.display = "none";
 });
 
+
+function pauseVid() {
+    var iframe = document.getElementsByClassName('VID')[0];
+    iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+  }
